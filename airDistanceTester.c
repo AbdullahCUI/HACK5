@@ -6,3 +6,19 @@
 int isClose(double a , double b){
     return (fabs(a - b) < DELTA);
 }
+int main(){
+    int failed = 0;
+    int passed = 0;
+    // test cases for the function degree to radians 
+    double latitude = 50.0; // take argument with 50 
+    double expected = 0.872665;
+    double returnedValue = (degreesToRadians(latitude)); // the argument latitude value copy to the function parameter 
+    if(isClose(returnedValue,expected) ){
+     printf("PASSED\n"); // test passed
+     passed++;
+    }
+    else{
+     printf("Failed: degreeToRadians returned %lf, Expected %lf \n",returnedValue, expected);
+     failed++; // test failed
+   
+    }
