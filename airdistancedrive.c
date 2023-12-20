@@ -19,3 +19,9 @@ int main(){
  double percentVelocity, time;
  printf("Enter the time observed it rest in year: ");
  scanf("%lf",&time);
+ printf("Enter the Velocity of the object scale[0,1]: ");
+ scanf("%lf",&percentVelocity);
+ lorentzTimeDilation(time, percentVelocity);
+ printf("the time dilation = %0.2lf year\n",lorentzTimeDilation(time, percentVelocity));
+
+}
