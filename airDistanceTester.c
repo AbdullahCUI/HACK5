@@ -62,3 +62,16 @@ int main(){
      failed++;
    
     }
+       // just i change the value except all same
+    originLatitude = -40.0, originLongitude = 85.0, destinationLatitude = -45.0, destinationLongitude = 96.0;
+    printf("getAirDistance(%lf,%lf,%lf,%lf): ",originLatitude,originLongitude,destinationLatitude,destinationLongitude);
+    returnedValue =round(getAirDistance(originLatitude,originLongitude,destinationLatitude,destinationLongitude));
+    if(returnedValue == 1058.0){
+     printf("PASSED\n");
+     passed++;
+    }
+    else{
+     printf("Failed: degreeToRadians returned %lf, Expected 1058.0\n",returnedValue);
+     failed++;
+   
+    }
