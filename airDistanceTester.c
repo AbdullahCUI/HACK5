@@ -47,3 +47,18 @@ int main(){
      failed++;
    
     }
+      // test case use for to test the result of the getAirDistance function
+    // we assign solid value to a variable and copy these value to getAirDistance function
+    double originLatitude = 40.0, originLongitude = -85.0, destinationLatitude = 42.0, destinationLongitude = -96.0;
+    printf("getAirDistance(%lf,%lf,%lf,%lf): ",originLatitude,originLongitude,destinationLatitude,destinationLongitude);
+    // return distance value according him we find that the value is wrong or not
+    returnedValue =round(getAirDistance(originLatitude,originLongitude,destinationLatitude,destinationLongitude));
+    if(returnedValue == 949.0){
+     printf("PASSED\n");
+     passed++;
+    }
+    else{
+     printf("Failed: degreeToRadians returned %lf, Expected 949.0\n",returnedValue);
+     failed++;
+   
+    }
