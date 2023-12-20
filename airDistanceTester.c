@@ -22,3 +22,16 @@ int main(){
      failed++; // test failed
    
     }
+      // same for other 2 test case just change value
+    latitude = 150.0;
+    expected = 2.617994;
+    returnedValue = (degreesToRadians(latitude));
+    if(isClose(returnedValue, expected)){
+     printf("PASSED\n");
+     passed++;
+    }
+    else{
+     printf("Failed: degreeToRadians returned %lf, Expected %lf \n",returnedValue, expected);
+     failed++;
+   
+    }
