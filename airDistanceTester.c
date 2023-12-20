@@ -35,3 +35,15 @@ int main(){
      failed++;
    
     }
+       double longitude = 96.0;
+    expected = 2.0;
+    returnedValue = round(degreesToRadians(longitude));
+    if(isClose(returnedValue, expected)){
+     printf("PASSED\n");
+     passed++;
+    }
+    else{
+      printf("Failed: degreeToRadians returned %lf, Expected %lf \n",returnedValue, expected);
+     failed++;
+   
+    }
