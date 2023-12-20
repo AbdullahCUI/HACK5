@@ -99,3 +99,33 @@ int main(){
      failed++;
    
     }
+      t = 2.0, percentC = 0.50;
+    returnedValue = round(lorentzTimeDilation(t, percentC));
+    if(returnedValue == 2.00){
+     printf("PASSED\n");
+     passed++;
+    }
+    else{
+     printf("Failed: lorentzTimeDilation() returned %lf, Expected 2.00\n",returnedValue);
+     failed++;
+   
+    }
+    t = 2.56, percentC = 0.6777;
+    returnedValue = round(lorentzTimeDilation(t, percentC));
+    if(returnedValue == 3.00){
+     printf("PASSED\n");
+     passed++;
+    }
+    else{
+     printf("Failed: lorentzTimeDilation() returned %lf, Expected 3.00\n",returnedValue);
+     failed++;
+   
+    }
+    // print the passed and failed also give the percentage of passed function
+
+    printf("The number of test passed: %d\n",passed);
+    printf("The number of test failed: %d\n",failed);
+    printf("The percentage of test passed: %lf\n",100.0 * passed/(passed + failed));
+  
+}
+
