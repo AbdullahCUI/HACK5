@@ -75,3 +75,27 @@ int main(){
      failed++;
    
     }
+       originLatitude = 85.0, originLongitude = -50.0 , destinationLatitude = 96.0, destinationLongitude = -63.0;
+    printf("getAirDistance(%lf,%lf,%lf,%lf): ",originLatitude,originLongitude,destinationLatitude,destinationLongitude);
+    returnedValue =round(getAirDistance(originLatitude,originLongitude,destinationLatitude,destinationLongitude));
+    if(returnedValue == 1215.0){
+     printf("PASSED\n");
+     passed++;
+    }
+    else{
+     printf("Failed: degreeToRadians returned %lf, Expected 1215.0\n",returnedValue);
+     failed++;
+   
+    }
+    // the test case write for the lorentzTimeDilation() function to check it work
+    double t = 1.0, percentC = 0.25;
+    returnedValue = round(lorentzTimeDilation(t, percentC));
+    if(returnedValue == 1.00){
+     printf("PASSED\n");
+     passed++;
+    }
+    else{
+     printf("Failed: lorentzTimeDilation() returned %lf, Expected 1.00\n",returnedValue);
+     failed++;
+   
+    }
